@@ -1,0 +1,100 @@
+@import './variable.scss';
+@import './mixins.scss';
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  padding: 10px;
+}
+
+.add-details {
+  color: $text-color1;
+  background-color: $btn-color;
+  width: 300px;
+  display: block;
+  margin: 5% auto;
+  height: 50px;
+  font-size: 1.5rem;
+  border: 2px solid $btn-color;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $btnHoverColor;
+    box-shadow: 0px 0px 10px 4px $btnHoverBgColor;
+  }
+}
+
+.data-container {
+  display: flex;
+  flex-flow: row;
+  gap: 23px;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.MuiDialog-paperWidthSm {
+  width: 60%;
+}
+.MuiFormControl-root {
+  width: 100%;
+}
+.MuiStack-root {
+  padding-top: 23px !important;
+}
+.h-primary {
+  display: block;
+  margin: 1px auto;
+}
+.container-box {
+  @include sameCode(flex, $boxColor, column);
+  width: 30%;
+  padding: 20px;
+}
+
+.storedData {
+  @include sameCode(flex, $white, row);
+  justify-content: space-between;
+  height: 100px;
+  font-size: 1.4rem;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0px 5px;
+  margin: 5px 0px;
+}
+
+.Low {
+  color: rgb(57, 116, 235);
+}
+.High {
+  color: red;
+}
+.Medium {
+  color: coral;
+}
+@media screen and (max-width: 1530px) {
+  .storedData {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .data-container {
+      flex-flow: column;
+      width: 80%;
+      align-items: center;
+      margin: auto;
+    }
+    .container-box {
+      width: 100%;
+    }
+    .storedData {
+      font-size: 1.4rem;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .storedData {
+      font-size: 0.9rem;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@mixin sameCode($d, $btnC, $ff) {
+  display: $d;
+  background-color: $btnC;
+  flex-flow: $ff;
+}
